@@ -1,0 +1,25 @@
+# Vivado temporary folders and compile caches
+.Xil/
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.ip_user_files/
+xsim/
+
+# Vivado utility sources
+*.srcs/utils_1/
+
+# Vivado logs, journals and backup files
+*.log
+*.jou
+*.pb
+*.wdb
+*.vdb
+*.str
+*.backup.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini

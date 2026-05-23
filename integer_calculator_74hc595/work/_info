@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/dome/calculator1
+vdiv
+!s110 1705743118
+!i10b 1
+!s100 <P`f@XKb^O_Vlkc9G@L=:1
+IPInG>`^WGK4ncQ0J62Z:03
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1705071893
+8d:\dome\calculator1\src\div.v
+Fd:\dome\calculator1\src\div.v
+L0 5
+Z2 OP;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1705743118.000000
+!s107 d:\dome\calculator1\src\div.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\div.v|
+!i113 1
+Z3 o-nologo -work work
+Z4 tCvgOpt 0
+vhc595_drive
+!s110 1705740254
+!i10b 1
+!s100 BVn[aj9fW7P_o`dm4<GVP0
+Ie9]aPn;j4`Adhf]bIIKVi1
+R1
+R0
+w1705740253
+8d:\dome\calculator1\src\hc595_drive.v
+Fd:\dome\calculator1\src\hc595_drive.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1705740254.000000
+!s107 d:\dome\calculator1\src\hc595_drive.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\hc595_drive.v|
+!i113 1
+R3
+R4
+vkey_scan
+!s110 1705735336
+!i10b 1
+!s100 :]3_3_^IXUhIHQc<@GIij2
+I0WE27>LNClYkIOgTJFZCS3
+R1
+R0
+w1705575817
+8d:\dome\calculator1\src\key_scan.v
+Fd:\dome\calculator1\src\key_scan.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1705735335.000000
+!s107 d:\dome\calculator1\src\key_scan.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\key_scan.v|
+!i113 1
+R3
+R4
+vmult
+!s110 1705742912
+!i10b 1
+!s100 a5=75=M5<^NRZ5eQ:al5V3
+I1Dkm?J>of8Bk3E15=5^<N1
+R1
+R0
+w1705674349
+8d:\dome\calculator1\src\mult.v
+Fd:\dome\calculator1\src\mult.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1705742911.000000
+!s107 d:\dome\calculator1\src\mult.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\mult.v|
+!i113 1
+R3
+R4
+voperation_ctrl
+!s110 1705742831
+!i10b 1
+!s100 f@=nU[909Ph:4@ONl2:UC0
+IHPV2_z6Rg9EM:JWj5_aG:1
+R1
+R0
+w1705742830
+8d:\dome\calculator1\src\operation_ctrl.v
+Fd:\dome\calculator1\src\operation_ctrl.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1705742831.000000
+!s107 d:\dome\calculator1\src\operation_ctrl.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\operation_ctrl.v|
+!i113 1
+R3
+R4
+vseg_disp
+!s110 1705740354
+!i10b 1
+!s100 Vh8:[_]Mj]]_SKOYaOSGB0
+Ig=1:SSoR89gf]d]jcjS<j0
+R1
+R0
+w1705740354
+8d:\dome\calculator1\src\seg_disp.v
+Fd:\dome\calculator1\src\seg_disp.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1705740354.000000
+!s107 d:\dome\calculator1\src\seg_disp.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\seg_disp.v|
+!i113 1
+R3
+R4
+vtest
+!s110 1705744350
+!i10b 1
+!s100 m7RmElVnAVZM`QY1Ya8GQ1
+IZ4`Cmn^Y[lbk_A8>lIo`L3
+R1
+R0
+w1705744350
+8d:\dome\calculator1\src\test.v
+Fd:\dome\calculator1\src\test.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1705744350.000000
+!s107 d:\dome\calculator1\src\test.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\test.v|
+!i113 1
+R3
+R4
+vtop
+!s110 1705744171
+!i10b 1
+!s100 I6ojP?HaIDo>YD=zFT@Mf2
+IWUiEkSEM_PcP8LN4bUN2]1
+R1
+R0
+w1705744171
+8d:\dome\calculator1\src\top.v
+Fd:\dome\calculator1\src\top.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1705744171.000000
+!s107 d:\dome\calculator1\src\top.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\top.v|
+!i113 1
+R3
+R4

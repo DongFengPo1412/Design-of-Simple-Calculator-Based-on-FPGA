@@ -1,0 +1,241 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/dome/calculator/src
+vdiv
+!s110 1705998923
+!i10b 1
+!s100 <P`f@XKb^O_Vlkc9G@L=:1
+IPInG>`^WGK4ncQ0J62Z:03
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dd:/dome/calculator1/src
+w1705071893
+8d:\dome\calculator1\src\div.v
+Fd:\dome\calculator1\src\div.v
+L0 5
+Z3 OP;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1705998923.000000
+!s107 d:\dome\calculator1\src\div.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\div.v|
+!i113 1
+Z4 o-nologo -work work
+Z5 tCvgOpt 0
+vhc595_drive
+!s110 1705999101
+!i10b 1
+!s100 ^MH;39><m`=b5laN6WYz@1
+IAQ7h?zM3XcY9m0h[7>DDL1
+R1
+R2
+w1705758479
+8d:\dome\calculator1\src\hc595_drive.v
+Fd:\dome\calculator1\src\hc595_drive.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705999101.000000
+!s107 d:\dome\calculator1\src\hc595_drive.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\hc595_drive.v|
+!i113 1
+R4
+R5
+vhex2bcd
+!s110 1705998977
+!i10b 1
+!s100 Lel8O48]ZKC6c0mUd9:373
+I_::91fD9GIH6Nl5no1feg1
+R1
+R2
+w1705756318
+8d:\dome\calculator1\src\hex2bcd.v
+Fd:\dome\calculator1\src\hex2bcd.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705998977.000000
+!s107 d:\dome\calculator1\src\hex2bcd.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\hex2bcd.v|
+!i113 1
+R4
+R5
+vkey_Board_model
+!s110 1703246331
+!i10b 1
+!s100 Hbe3FmaWInYPGV1o`fg?_3
+IQHf4KXY4a6^;9Dgf[W0II3
+R1
+R0
+w1703246330
+8d:\dome\calculator\src\key_Board_model.v
+Fd:\dome\calculator\src\key_Board_model.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1703246330.000000
+!s107 d:\dome\calculator\src\key_Board_model.v|
+!s90 -nologo|-work|work|d:\dome\calculator\src\key_Board_model.v|
+!i113 1
+R4
+R5
+nkey_@board_model
+vkey_scan
+!s110 1705998783
+!i10b 1
+!s100 :]3_3_^IXUhIHQc<@GIij2
+I0WE27>LNClYkIOgTJFZCS3
+R1
+R2
+w1705575817
+8d:\dome\calculator1\src\key_scan.v
+Fd:\dome\calculator1\src\key_scan.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705998783.000000
+!s107 d:\dome\calculator1\src\key_scan.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\key_scan.v|
+!i113 1
+R4
+R5
+vmult
+!s110 1705998890
+!i10b 1
+!s100 a5=75=M5<^NRZ5eQ:al5V3
+I1Dkm?J>of8Bk3E15=5^<N1
+R1
+R2
+w1705674349
+8d:\dome\calculator1\src\mult.v
+Fd:\dome\calculator1\src\mult.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705998890.000000
+!s107 d:\dome\calculator1\src\mult.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\mult.v|
+!i113 1
+R4
+R5
+voperation
+!s110 1703216714
+!i10b 1
+!s100 oddT@JfQ=ILDaB3YYHcOD0
+I^@2hU]bJGMbh:LH__W<JK2
+R1
+R0
+w1703216714
+8d:\dome\calculator\src\operation.v
+Fd:\dome\calculator\src\operation.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1703216714.000000
+!s107 d:\dome\calculator\src\operation.v|
+!s90 -nologo|-work|work|d:\dome\calculator\src\operation.v|
+!i113 1
+R4
+R5
+voperation_ctrl
+!s110 1705998851
+!i10b 1
+!s100 oLbM`hdKNJ=i:6g5lWeb31
+IWe9EmNbga`nzn]BM_k1AJ1
+R1
+R2
+w1705937084
+8d:\dome\calculator1\src\operation_ctrl.v
+Fd:\dome\calculator1\src\operation_ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705998851.000000
+!s107 d:\dome\calculator1\src\operation_ctrl.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\operation_ctrl.v|
+!i113 1
+R4
+R5
+vseg_disp
+!s110 1705999032
+!i10b 1
+!s100 zFXYe?U69ZZBS@6jZ5nc[1
+IcznH5Xa^B5o>]6HDEiVZS2
+R1
+R2
+w1705758466
+8d:\dome\calculator1\src\seg_disp.v
+Fd:\dome\calculator1\src\seg_disp.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705999032.000000
+!s107 d:\dome\calculator1\src\seg_disp.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\seg_disp.v|
+!i113 1
+R4
+R5
+vtest
+!s110 1706164057
+!i10b 1
+!s100 nDW<1zT@7@TKg@afN7Z7C2
+I3f4goYU`W0aCX2A?>@N4b1
+R1
+R2
+w1705995311
+8d:\dome\calculator1\src\test.v
+Fd:\dome\calculator1\src\test.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1706164057.000000
+!s107 d:\dome\calculator1\src\test.v|
+!s90 -nologo|-work|work|d:\dome\calculator1\src\test.v|
+!i113 1
+R4
+R5
+vtop
+!s110 1705996096
+!i10b 1
+!s100 ?Ea2_MlG9Id4eP8o5W^WJ3
+IiIo?maTXckK]OeVnTP6X11
+R1
+dD:/dome/calculator1/src
+w1705995314
+8top.v
+Ftop.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1705996096.000000
+!s107 top.v|test.v|seg_disp.v|operation_ctrl.v|mult.v|key_scan.v|hex2bcd.v|hc595_drive.v|div.v|
+!s90 div.v|hc595_drive.v|hex2bcd.v|key_scan.v|mult.v|operation_ctrl.v|seg_disp.v|test.v|top.v|
+!i113 1
+R5

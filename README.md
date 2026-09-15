@@ -176,7 +176,7 @@ $$
 graph LR
     CLK_50M["50MHz 主时钟"] --> DIV["div.v 分频器"]
     DIV -->|1kHz| SCAN["ajxd.v 行扫描循环"]
-    DIV -->|50Hz (20ms)| SAMPLE["ajxd.v 三级移位寄存器"]
+    DIV -->|"50Hz (20ms)"| SAMPLE["ajxd.v 三级移位寄存器"]
     SCAN -->|col 信号锁存| SAMPLE
     SAMPLE -->|btn0, btn1, btn2| LOGIC["布尔判定逻辑"]
     LOGIC -->|滤除毛刺| BTN_OUT["稳定的按键输出 (btn_out)"]

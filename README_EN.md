@@ -176,7 +176,7 @@ Mechanical contacts exhibit transient ringing lasting $5 \sim 15\,\text{ms}$. To
 graph LR
     CLK_50M["50MHz System Clock"] --> DIV["div.v Clock Divider"]
     DIV -->|1kHz| SCAN["ajxd.v Row Scanner"]
-    DIV -->|50Hz (20ms)| SAMPLE["ajxd.v 3-Stage Shift Register"]
+    DIV -->|"50Hz (20ms)"| SAMPLE["ajxd.v 3-Stage Shift Register"]
     SCAN -->|Column Capture| SAMPLE
     SAMPLE -->|btn0, btn1, btn2| LOGIC["Boolean Decision Logic"]
     LOGIC -->|Glitch Suppressed| BTN_OUT["Stable Key Output (btn_out)"]

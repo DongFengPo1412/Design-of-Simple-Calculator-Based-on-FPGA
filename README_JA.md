@@ -176,7 +176,7 @@ $$
 graph LR
     CLK_50M["50MHz システムクロック"] --> DIV["div.v 分周器"]
     DIV -->|1kHz| SCAN["ajxd.v 行走査"]
-    DIV -->|50Hz (20ms)| SAMPLE["ajxd.v 3段シフトレジスタ"]
+    DIV -->|"50Hz (20ms)"| SAMPLE["ajxd.v 3段シフトレジスタ"]
     SCAN -->|列信号ラッチ| SAMPLE
     SAMPLE -->|btn0, btn1, btn2| LOGIC["ブール判定論理"]
     LOGIC -->|ノイズ抑圧| BTN_OUT["安定出力 (btn_out)"]

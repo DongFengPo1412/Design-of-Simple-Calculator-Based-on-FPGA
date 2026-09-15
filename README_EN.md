@@ -68,7 +68,7 @@ Below are authentic captures from physical EGO1 board testing footage and the co
 | 1. Keypad Input & Real-Time Debounce | 2. Arithmetic Execution & Dynamic 7-Segment Refresh | 3. Negative Sign Flag & Remainder Handling |
 | :---: | :---: | :---: |
 | <img src="docs/images/demo_fpga_board_test_45s.jpg" width="310px" alt="Keypad Input Capture"/> | <img src="docs/images/demo_fpga_board_test_85s.jpg" width="310px" alt="Dynamic 7-Segment Display"/> | <img src="docs/images/demo_fpga_board_test_155s.jpg" width="310px" alt="Negative Sign & Remainder Display"/> |
-| 4x4 keypad scanned at 1kHz; 50Hz 3-stage shift filter captures operands with sub-50ms latency | ALU responds immediately to four basic operations; 1kHz refresh guarantees flicker-free display | Full hardware support for $A < B$ negative sign assertion, overflow flags, and 2-digit fractional remainders |
+| 4x4 keypad scanned at 1kHz; 50Hz 3-stage shift filter captures operands with sub-50ms latency | ALU responds immediately to four basic operations; 1kHz refresh guarantees flicker-free display | Full hardware support for `A < B` negative sign assertion, overflow flags, and 2-digit fractional remainders |
 
 </div>
 
@@ -113,7 +113,7 @@ graph TD
    - Integrates a parameterized `hex2bcd` (Double-Dabble shift-and-add-3) engine and signed non-restoring divider.
 3. **Interactive Debounced Matrix & Audio Calculator (`integer_calculator_buzzer/`)**:
    - Capstone course design implementation. Computes signed multi-digit operations across addition, subtraction, multiplication, and division.
-   - Robust negative sign assertion ($A < B$ negative tube activation), division-by-zero prevention, and fractional remainder rendering.
+   - Robust negative sign assertion (`A < B` negative tube activation), division-by-zero prevention, and fractional remainder rendering.
    - Real-time PWM tone synthesizer providing pitch feedback upon keypress and calculation completion.
 
 ---
@@ -295,7 +295,7 @@ Targeting the **Xilinx Artix-7 XC7A35TFTG256-1** FPGA, synthesized and implement
 
 ### Engineering Benchmarks & Measured Performance
 - **Logic Utilization**: Synthesis reports confirm overall FPGA slice utilization around **15%**, with clocking resource usage around **5%**.
-- **Input Response Latency**: Measured physical input latency is **$< 50\,\text{ms}$**, ensuring immediate human perception.
+- **Input Response Latency**: Measured physical input latency is **`< 50ms`**, ensuring immediate human perception.
 - **Display Refresh Rate**: $1\,\text{kHz}$ dynamic refresh rate completely eliminates human visible flicker.
 
 ---

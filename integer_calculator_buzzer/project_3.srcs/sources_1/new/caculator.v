@@ -79,28 +79,28 @@ endmodule
 
 module cal(
     input clk_in, //输入的1kHz时钟
-    output reg [5:0] DIG,//位码
-    output reg [7:0] seg,//段码
+    output reg [5:0] DIG=6'b111111,//位码
+    output reg [7:0] seg=0,//段码
     input [15:0] btn,//按键
     input sw1,//开关1
     input sw2//开关2
  );
-   reg [4:0] i;  //定义一个计数寄存器变量
+   reg [4:0] i=0;  //定义一个计数寄存器变量
    reg [3:0] disp_dat1=0,disp_dat2=0,disp_dat3=0,disp_dat4=0,disp_dat5=0;//前五个数码管显示值
    reg [2:0] state=0;//判断按键处于什么状态
    reg [3:0] op = 0; // 判断是哪种运算关系
    reg [3:0] key_buf=4'b0000,key_buf2=4'b0000,key2_buf=4'b0000,key2_buf2=4'b0000;//存储两个数的个位和十位
    reg eco=0;//判断"="是否按下
-   reg [2:0] dig_count;//位码计数器
-   reg [20:0] result;//存储结果
+   reg [2:0] dig_count=0;//位码计数器
+   reg [20:0] result=0;//存储结果
    reg  result_reg1 = 0,result_reg2 = 0;//判断连加和连减过程中是否有新的按键被按下
-   reg [3:0] h_bit2,h_bit,l_bit;//计算结果后三位显示值
+   reg [3:0] h_bit2=0,h_bit=0,l_bit=0;//计算结果后三位显示值
    wire [20:0] a;
    wire [6:0] b;//参与运算的第一个数为a,第二个数为b，因为a可能大于99，故位数较大
-   reg [3:0] res;//除法中的余数
+   reg [6:0] res=0;//除法中的余数
    reg [3:0] ch=4'b1111;//判断第一次按键和第二次按键的情况
-   reg [20:0] a_reg;
-   reg [6:0] b_reg;//存储a和b
+   reg [20:0] a_reg=0;
+   reg [6:0] b_reg=0;//存储a和b
    reg flag=0;//判断是否处于连加、连减、连乘、连除
    reg minus=0;//判断是否有"-"号出现
    parameter add=4'b1010,sub=4'b1011,mult=4'b1100,div=4'b1101;//定义加减乘除
@@ -160,11 +160,8 @@ module cal(
                  
                else if(i>=10 && i<=13) //如果加减乘除键其中一个被按下
                  begin
-                  if(state != 6)
-                    begin
-                      op <= i;
-                    end
-                  else if(state == 6)
+                  op <= i;
+                  if(state == 6)
                     begin
                       a_reg <= result;
                       b_reg <= 0;
@@ -504,6 +501,7 @@ module cal(
              begin
               if(eco == 1)
                 begin
+               if(op != div) res <= 0;
                case(op)//运算模块
                 add:
                   if(flag == 0)//如果是第一次按"="
@@ -582,8 +580,13 @@ module cal(
                         minus <= 0;
                        else 
                         minus <= 1;
-                        result <= a / b;
-                        res <= a % b;
+                        if (b == 0) begin
+                          result <= 0;
+                          res <= 0;
+                        end else begin
+                          result <= a / b;
+                          res <= a % b;
+                        end
                       end
              endcase
          end
@@ -595,6 +598,8 @@ module cal(
         end
         else if(state == 0 & state != 3)
           begin
+            result <= 0;
+            res <= 0;
             minus <= 0;//符号位清零
           end
         else if(state == 3)
@@ -619,18 +624,26 @@ module FreDiv(
 		begin
 			count_max=0;
 			count=0;
+            clk_out=0;
 		end
 	
 	always @ (posedge clk)
 	begin
-		count_max = 25'b1011111010111100001000000 / frequency;
-		if(count >= count_max)
+        if (frequency == 0) begin
+            count = 0;
+            clk_out = 0;
+        end else begin
+        // Existing 50 MHz clock assumption; no board-frequency measurement.
+        count_max = 25000000 / frequency;
+        if (count_max < 1) count_max = 1;
+		if(count >= count_max - 1)
 		begin
 			count = 0;
 			clk_out = ~clk_out;
 		end
 		else	
 		  count = count+1'b1;
+        end
 	end
 endmodule
 
@@ -694,8 +707,9 @@ module buzzermusic(
         initial 
             begin
                multiplier=5'b00100;
-               mus_fre=50000;
-              music=19'd50000;
+               mus_fre=0;
+              music=0;
+              mid=5'b10001;
             end
                
       always @ (btn)
@@ -746,18 +760,20 @@ endmodule
 module Buzzercontrol(
   input clk,  
   input [18:0] buzzer_count,  
-  output reg buzzer
+  output reg buzzer = 0
     );
     
-    reg [18:0] count;
-    reg [18:0] buzzer_count_half;
+    reg [18:0] count=0;
+    reg [18:0] buzzer_count_half=0;
 
     
     always @ (posedge clk)
     begin
         buzzer_count_half = buzzer_count / 2;
-        if(buzzer_count==0)
-        	buzzer = 0;
+        if(buzzer_count==0) begin
+            buzzer = 0;
+            count = 0;
+        end
             else   
              begin
                 count=count+1'b1;

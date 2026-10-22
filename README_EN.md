@@ -69,6 +69,12 @@ Read the [project and validation guide](docs/setup.en.md) first. The main projec
 
 ## Verification and credits
 
-This review inspected RTL, project XML, constraints, and historical simulation records. No HDL compilation, simulation, synthesis, timing closure, or board test was performed; no usable Vivado, Icarus, or Verilator executable was found in this environment.
+Icarus Verilog 13.0 compiles and executes the real RTL self-test: all 9900 quotient/remainder combinations for a=0–99, b=1–99, plus 98/99 fractional digits, zero division, mixed chaining, negative subtraction, clear and startup/divider/buzzer boundaries. Tests drive cal button vectors directly and place the divider at known counter states; they do not measure physical keys, pitch or clock frequency. No Vivado synthesis, implementation, timing closure or fresh board test occurred.
 
 Reset, clock constraints, and arithmetic boundary tests take priority over completing the two experiments. Earlier project material lists Chaoran Liu and Fanzhang Li; source alone does not establish their individual module ownership. See [LICENSE](LICENSE); external material requires separate provenance and rights checks.
+
+## Maintenance and RTL self-tests
+
+The 2026-10 buzzer-version fixes widen the remainder to seven bits, guard division/modulo by zero, and update op when a new operator follows a result. Calculation state, scan count, divider output and buzzer count have explicit initial values; clear resets result/remainder. Divider half-period endpoints are corrected, zero frequency disables output, and startup does not request a tone without a key.
+
+Icarus Verilog 13.0 compiles and executes the real RTL self-test: all 9900 quotient/remainder combinations for a=0–99, b=1–99, plus 98/99 fractional digits, zero division, mixed chaining, negative subtraction, clear and startup/divider/buzzer boundaries. Tests drive cal button vectors directly and place the divider at known counter states; they do not measure physical keys, pitch or clock frequency. No Vivado synthesis, implementation, timing closure or fresh board test occurred.

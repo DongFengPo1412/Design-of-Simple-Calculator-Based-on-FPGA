@@ -32,12 +32,25 @@ This transcribes repository constraints, not universal Artix-7 board wiring. Che
 
 First establish reset/initialization and a testbench matching the current top. Check keys, repeated digits, clear, four operations, negative differences, zero division, remainders above 15, overflow, and mixed chained operations. Only then proceed to synthesis, timing constraints, implementation, and board testing.
 
-This review parsed project XML and inspected RTL, constraints, and historical records. It did not run HDL tools or program hardware. Old checkpoints and ModelSim logs do not establish a current pass.
+Icarus Verilog 13.0 compiles and executes the real RTL self-test: all 9900 quotient/remainder combinations for a=0–99, b=1–99, plus 98/99 fractional digits, zero division, mixed chaining, negative subtraction, clear and startup/divider/buzzer boundaries. Tests drive cal button vectors directly and place the divider at known counter states; they do not measure physical keys, pitch or clock frequency. No Vivado synthesis, implementation, timing closure or fresh board test occurred.
 
 <a id="next"></a>
 
 ## Reproduction requirements
 
-A current self-checking testbench and fresh timing reports are missing. Reproduction needs the actual FPGA board, keypad/display/buzzer wiring, and verified clock frequency. The exploratory variants also require algorithm and connection work.
+Confirm oscillator and primary/generated-clock constraints before synthesis and hardware validation. The 74HC595 and IEEE754 directories remain unfinished experiments, with their missing work kept separate from the main version.
 
-Validate the main integer version first, then develop serial display and floating-point experiments separately. Those are future source changes; this revision changes documentation only.
+The [asserting testbench](../tests/tb_calculator.v) is registered in the main sim_1 with tb_calculator as behavioral top. Loose historical tests and the two exploratory directories are retained without being counted as passing tests.
+
+## Maintenance and RTL self-tests
+
+Icarus Verilog 13.0 compiles and executes the real RTL self-test: all 9900 quotient/remainder combinations for a=0–99, b=1–99, plus 98/99 fractional digits, zero division, mixed chaining, negative subtraction, clear and startup/divider/buzzer boundaries. Tests drive cal button vectors directly and place the divider at known counter states; they do not measure physical keys, pitch or clock frequency. No Vivado synthesis, implementation, timing closure or fresh board test occurred.
+
+Confirm oscillator and primary/generated-clock constraints before synthesis and hardware validation. The 74HC595 and IEEE754 directories remain unfinished experiments, with their missing work kept separate from the main version.
+
+```shell
+iverilog -g2012 -s tb_calculator -o "$BUILD_DIR/calculator.vvp" integer_calculator_buzzer/project_3.srcs/sources_1/new/caculator.v tests/tb_calculator.v
+vvp "$BUILD_DIR/calculator.vvp"
+```
+
+Install [Icarus](https://steveicarus.github.io/iverilog/usage/installation.html) and set BUILD_DIR to an existing external output directory.

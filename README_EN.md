@@ -4,7 +4,7 @@ A Verilog course project covering keypad input, integer arithmetic, multiplexed 
 
 [简体中文](README.md) · **English** · [日本語](README_JA.md)
 
-**Explore：** [Technical notes](docs/technical-notes.en.md) · [Setup and operation](docs/setup.en.md)
+**Explore:** [Technical notes](docs/technical-notes.en.md) · [Setup and operation](docs/setup.en.md)
 
 The main implementation is an integer calculator driven by keypad input. Two exploratory variants are also archived. Their integration gaps are documented separately; combining their modules would describe a system that the repository does not currently implement. Vivado file sets and actual connections define the scope.
 

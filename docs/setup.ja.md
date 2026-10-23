@@ -44,9 +44,6 @@ Icarus Verilog 13.0で実RTLをコンパイル・実行し、a=0–99、b=1–99
 
 ## 保守修正とRTL自己検査
 
-Icarus Verilog 13.0で実RTLをコンパイル・実行し、a=0–99、b=1–99の商・余り9900組、98/99の小数2桁、ゼロ除算、混合連続演算、負の減算、クリア、初期化・分周・ブザー境界が通過しました。calのキー配列を直接駆動し、分周端点は既知カウントを与えた検査で、物理キー・音程・周波数の測定ではありません。Vivado合成・実装・タイミング収束・再書込は未実施です。
-
-発振器と主・生成クロック制約を確認してから合成・実機評価を行います。74HC595とIEEE754は未完成の実験であり、主版の完成機能へ混在させません。
 
 ```shell
 iverilog -g2012 -s tb_calculator -o "$BUILD_DIR/calculator.vvp" integer_calculator_buzzer/project_3.srcs/sources_1/new/caculator.v tests/tb_calculator.v

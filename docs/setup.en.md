@@ -44,10 +44,6 @@ The [asserting testbench](../tests/tb_calculator.v) is registered in the main si
 
 ## Maintenance and RTL self-tests
 
-Icarus Verilog 13.0 compiles and executes the real RTL self-test: all 9900 quotient/remainder combinations for a=0–99, b=1–99, plus 98/99 fractional digits, zero division, mixed chaining, negative subtraction, clear and startup/divider/buzzer boundaries. Tests drive cal button vectors directly and place the divider at known counter states; they do not measure physical keys, pitch or clock frequency. No Vivado synthesis, implementation, timing closure or fresh board test occurred.
-
-Confirm oscillator and primary/generated-clock constraints before synthesis and hardware validation. The 74HC595 and IEEE754 directories remain unfinished experiments, with their missing work kept separate from the main version.
-
 ```shell
 iverilog -g2012 -s tb_calculator -o "$BUILD_DIR/calculator.vvp" integer_calculator_buzzer/project_3.srcs/sources_1/new/caculator.v tests/tb_calculator.v
 vvp "$BUILD_DIR/calculator.vvp"

@@ -44,9 +44,6 @@ Icarus Verilog 13.0编译并运行真实RTL自检通过：穷举a=0–99、b=1�
 
 ## 维护修订与RTL自检
 
-Icarus Verilog 13.0编译并运行真实RTL自检通过：穷举a=0–99、b=1–99的9900组商/余数，另检查98/99的小数两位、零除、混合串联、负减法、清零和启动/分频/蜂鸣器边界。测试直接驱动cal按键向量，分频端点使用已知计数状态，不是实物按键、音程或时钟测量。未执行Vivado综合、实现、时序收敛或重新上板。
-
-先确认板卡晶振及主时钟/派生时钟约束，再进行综合与板端验证。74HC595和IEEE754仍是未完成实验；没有把实验缺项包装成主版本完成内容。
 
 ```shell
 iverilog -g2012 -s tb_calculator -o "$BUILD_DIR/calculator.vvp" integer_calculator_buzzer/project_3.srcs/sources_1/new/caculator.v tests/tb_calculator.v
